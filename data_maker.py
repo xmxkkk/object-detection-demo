@@ -16,6 +16,7 @@ import numpy as np
 import PIL.Image
 import tensorflow as tf
 import sys
+import shutil
 
 WORK_DIR = '/Users/xmx/anaconda/envs/py36/lib/python3.6/site-packages/tensorflow/models/research'
 
@@ -147,8 +148,8 @@ def make_shape(max_num, width, height, bg_color=True, filename=None, label_map_d
 
 def save(size, max_num, width, height, bg_color=True,type='train'):
     output_dir = os.path.join('./data',type)
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
+    shutil.rmtree(output_dir)
+    os.makedirs(output_dir)
 
     label_map_path = './data/label/shape_label_map.pbtxt'
     num_shards = 10
