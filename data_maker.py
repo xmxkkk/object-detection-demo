@@ -169,8 +169,9 @@ def save(size, max_num, width, height, bg_color=True,type='train'):
 
 
 # save(10,1,64,64)
-save(10000, 3, 128, 128, False,'train')
-save(1000, 3, 128, 128, False,'test')
+# save(10000, 3, 128, 128, False,'train')
+# save(1000, 3, 128, 128, False,'test')
+# save(1000, 3, 128, 128, False,'val')
 
 # save(1000,1,128,128,False)
 # save(10000)
